@@ -1,0 +1,170 @@
+
+/* --- Fondo general --- */
+/* --- Fondo general con imagen + overlay --- */
+body {
+    font-family: "Vend Sans", sans-serif;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    /* Imagen de fondo */
+    background-image: 
+        linear-gradient(
+            rgba(20, 20, 60, 0.55),   
+            rgba(20, 20, 60, 0.55)
+        ),
+        url("wallpaperl.webp");        
+
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.weather-container h1 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #ffffffcc;
+    backdrop-filter: blur(4px);
+    padding: 6px 10px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.2);
+    display: inline-block;
+    text-shadow: 0 2px 6px rgba(0,0,0,0.5);
+}
+
+
+
+
+
+/* --- Contenedor principal --- */
+.weather-container {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    padding: 25px 30px;
+    border-radius: 20px;
+
+    /* Glass effect */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px) saturate(180%);
+    -webkit-backdrop-filter: blur(15px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+    text-align: center;
+}
+
+
+/* --- Grupos de inputs --- */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-weight: 600;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #457b9d;
+    outline: none;
+    transition: 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #55076d;
+}
+
+/* --- Botón --- */
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    background: #1d3557;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+
+.btn-primary:hover {
+    background: #16324f;
+    transform: scale(1.02);
+}
+
+    
+/* Centrar completamente el contenido */
+/* Contenedor general */
+.result-box {
+    background: #ffffff;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;                /* separación uniforme entre filas */
+}
+
+/* Cada fila: icono + texto alineados */
+.result-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;      /* alineación vertical */
+    justify-content: flex-start; /* alineación horizontal a la izquierda */
+    gap: 12px;                /* separación entre ícono y texto */
+}
+
+/* Iconos */
+.result-item .material-symbols-outlined {
+    font-size: 28px;
+    color: #1d3557;
+}
+
+/* Texto */
+.result-box p {
+    font-size: 1.1rem;
+    margin: 0;
+    color: #1d3557;
+}
+
+/* Estilos del footer */
+footer {
+    text-align: center;
+    padding: 12px;
+    color: #ffffffcc;
+    font-size: 0.9rem;
+    margin-top: 20px;
+
+    /* Glass delgadito (opcional para match con tu diseño) */
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(6px);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+footer img {
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+
+/* --- Responsive --- */
+@media (max-width: 400px) {
+    .weather-container {
+        padding: 20px;
+    }
+}

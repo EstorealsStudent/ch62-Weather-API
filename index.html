@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App with Inputs</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vend+Sans:ital,wght@0,300..700;1,300..700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" />
+</head>
+<body>
+
+    <main class="weather-container">
+        <h1>Weather Dashboard</h1>
+        
+        <div class="input-group">
+            <label for="latitude-input">Latitude</label>
+            <input type="number" id="latitude-input" placeholder="e.g. 19.43" value="25.666815" step="any">
+        </div>
+
+        <div class="input-group">
+            <label for="longitude-input">Longitude</label>
+            <input type="number" id="longitude-input" placeholder="e.g. -99.13" value="-100.28233" step="any">
+        </div>
+
+        <button id="fetch-btn" class="btn-primary" onclick="handleFetchClick()">
+            Get Weather
+        </button>
+
+<div id="weather-result" class="result-box hidden">
+
+    <div class="result-item">
+        <span class="material-symbols-outlined">thermometer</span>
+        <p>Temperature: <span id="temp-display">--</span> °C</p>
+    </div>
+
+    <div class="result-item">
+        <span class="material-symbols-outlined">air</span>
+        <p>Wind Speed: <span id="wind-display">--</span> km/h</p>
+    </div>
+
+</div>
+
+    </main>
+
+    <script src="script.js"></script>
+    <footer>
+        <p>Developed by Hector</p>
+        <img src="IMGMEME.jpg" alt="Weather Gif" width="50">
+    </footer>
+</body>
+</html>
