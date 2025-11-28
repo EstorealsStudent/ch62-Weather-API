@@ -104,8 +104,6 @@ body {
 }
 
     
-/* Centrar completamente el contenido */
-/* Contenedor general */
 .result-box {
     background: #ffffff;
     margin-top: 20px;
@@ -115,16 +113,16 @@ body {
 
     display: flex;
     flex-direction: column;
-    gap: 5px;                /* separación uniforme entre filas */
+    gap: 5px;               
 }
 
-/* Cada fila: icono + texto alineados */
+/* Cada fila: icono y texto alineados */
 .result-item {
     display: flex;
     flex-direction: row;
-    align-items: center;      /* alineación vertical */
-    justify-content: flex-start; /* alineación horizontal a la izquierda */
-    gap: 12px;                /* separación entre ícono y texto */
+    align-items: center;      
+    justify-content: flex-start; 
+    gap: 12px;                
 }
 
 /* Iconos */
@@ -147,8 +145,6 @@ footer {
     color: #ffffffcc;
     font-size: 0.9rem;
     margin-top: 20px;
-
-    /* Glass delgadito (opcional para match con tu diseño) */
     background: rgba(255, 255, 255, 0.12);
     backdrop-filter: blur(6px);
     border-top: 1px solid rgba(255, 255, 255, 0.2);
@@ -162,7 +158,6 @@ footer img {
 }
 
 
-/* --- Responsive --- */
 @media (max-width: 400px) {
     .weather-container {
         padding: 20px;
